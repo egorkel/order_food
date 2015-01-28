@@ -1,19 +1,47 @@
 <!DOCTYPE html>
-<html ng-app="order_food">
+<html ng-app="order_food" class="page">
   <header>
+    <meta charset="utf-8">
     <title>Order food at your place!</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="js/angular.min.js"></script>
     <script type="text/javascript" src="js/orfer_food.js"></script>
+    <div class="col-3 centered">
+      <h1></h1>
+    </div>
   </header>
   
   <body>
-    <form name="search_form" novalidate>
-      <h2>Find a place to order</h2>
-      <img src="img/search.jpg" height="20px">
-      <input type="search" name="search_request" placeholder="Enter store name or item" tabindex="1" required><br>
-      <img src="img/place.jpg" height="20px">
-      <input type="search" name="place" placeholder="Enter address or city" tabindex="2" required><br>
-      <input type="submit" value="Search" tabindex="3">
-    </form>
+    <div class="row">
+      <div class="col-3 centered">
+        <section class="search_section">
+        <form name="search_form" novalidate>
+          <div>
+            <h2>Find a place to order</h2>
+          </div>
+          <div class="in_row">
+            <div>
+              <img class="input_img" src="img/search.png">
+            </div>
+            <div>
+            <input type="search" name="search_request" placeholder="Store name or item" size="21" autocomplete="on" tabindex="1" required><br>
+            </div>
+          </div>
+          <div class="in_row">
+            <div>
+              <img class="input_img" src="img/place.png">
+            </div>
+            <div>
+              <input class=missed type="search" name="place" placeholder="Address or city" size="21" autocomplete="on" tabindex="2" required><br>
+            </div>
+          </div>
+          <div>
+            <input type="submit" value="Search" tabindex="3">
+          </div>
+        </form>
+        </section>
+      </div>
+    </div>
   </body>
 </html>

@@ -19,9 +19,7 @@
     this.results = results;
     this.visible = true;
     this.submit = function () {
-      if (this.result.item !== undefined && this.result.addr !== undefined) {
-        this.visible = false;
-      }
+      this.visible = false;
     };
   });
   

@@ -43,8 +43,9 @@ input {
   font-weight: 400;
   font-size: 20px;
 }
-input:required:invalid {
-  border-color: red;
+
+.but_en {
+  background-color: lightgreen;
 }
 
 .centered {

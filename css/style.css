@@ -26,8 +26,8 @@
 }
 
 .in_row {
-  width: 90%;
-  margin-left: auto;
+  width: 95%;
+  margin-left: 30px;
   margin-right: auto;
   margin-bottom: 5px;
   margin-top: 5px;
@@ -43,8 +43,7 @@ input {
   font-weight: 400;
   font-size: 20px;
 }
-.missed {
-  border-width: 1px;
+input:required:invalid {
   border-color: red;
 }
 
@@ -55,6 +54,13 @@ input {
 h2 {
   font-family: 'Maven Pro', sans-serif;
   font-weight: 700;
+}
+
+ul {
+  padding: 0;
+}
+li {
+  list-style-type: none;
 }
 
 /** {

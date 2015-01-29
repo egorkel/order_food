@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html ng-app="order_food" class="page">
-  <header>
+<html ng-app="order_food">
+  <head>
     <meta charset="utf-8">
     <title>Order food at your place!</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="js/angular.min.js"></script>
     <script type="text/javascript" src="js/orfer_food.js"></script>
-    <div class="col-3 centered">
-      <h1></h1>
-    </div>
-  </header>
+  </head>
   
-  <body>
+  <body class="page" ng-controller="body_ctrl as b_ctrl">
+    <header>
+      <div class="col-3 centered">
+        <h1>{{b_ctrl.text}}</h1>
+      </div>
+    </header>
     <div class="row">
       <div class="col-3 centered">
         <section class="search_section" ng-controller="search_ctrl as search" ng-show="search.visible">
-          <form name="search_form" ng-submit="search_form.$valid && search.submit()" novalidate>
+          <form name="search_form" ng-submit="search_form.$valid && search.submit(b_ctrl)" novalidate>
             <ul>
               <div>
                 <h2>Find a place to order</h2>

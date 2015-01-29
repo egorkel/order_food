@@ -35,13 +35,14 @@
   flex-wrap: wrap;
 }
 .input_img {
-  height: 25px;
+  width: 25px;
   margin-right: 5px;
 }
 input {
   font-family: 'Maven Pro', sans-serif;
   font-weight: 400;
   font-size: 20px;
+  max-width: 200px;
 }
 
 .but_en {

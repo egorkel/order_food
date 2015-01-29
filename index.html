@@ -2,51 +2,18 @@
 <html ng-app="order_food">
   <head>
     <meta charset="utf-8">
-    <title>Order food at your place!</title>
+    <base href="/">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="js/angular.min.js"></script>
-    <script type="text/javascript" src="js/orfer_food.js"></script>
+    <script type="text/javascript" src="js/angular-route.min.js"></script>
+    <title>Order food at your place!</title>
   </head>
   
-  <body class="page" ng-controller="body_ctrl as b_ctrl">
-    <header>
-      <div class="col-3 centered">
-        <h1>{{b_ctrl.text}}</h1>
-      </div>
-    </header>
-    <div class="row">
-      <div class="col-3 centered">
-        <section class="search_section" ng-controller="search_ctrl as search" ng-show="search.visible">
-          <form name="search_form" ng-submit="search_form.$valid && search.submit(b_ctrl)" novalidate>
-            <ul>
-              <div>
-                <h2>Find a place to order</h2>
-              </div>
-              <li class="in_row">
-                <div>
-                  <img class="input_img" src="img/search.png">
-                </div>
-                <div>
-                  <input ng-model="search.result.item" type="search" name="search_request" placeholder="Store name or item" size="21" autocomplete="on" tabindex="1" required><br>
-                </div>
-              </li>
-              <li class="in_row">
-                <div>
-                  <img class="input_img" src="img/place.png">
-                </div>
-                <div>
-                  <input ng-model="search.result.addr" type="search" name="place" placeholder="Address or city" size="21" autocomplete="on" tabindex="2" required><br>
-                </div>
-              </li>
-              <li>
-                <input ng-disabled="search_form.$invalid" ng-class="{but_en: search_form.$valid}" type="submit" value="Search" tabindex="3">
-              </li>
-            </ul>
-          </form>
-        </section>
-      </div>
-    </div>
+  <body class="page">
+    
+    <div ng-view></div>
 
+    <script type="text/javascript" src="js/order_food.js"></script>
   </body>
 </html>

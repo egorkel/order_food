@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-3 centered">
+    <section class="search_section" ng-controller="search_ctrl as search">
+      <form name="search_form" ng-submit="search_form.$valid && search()" novalidate>
+        <ul>
+          <div>
+            <h2>Find a place to order</h2>
+          </div>
+          <li class="in_row">
+            <div>
+              <img class="input_img" src="../img/search.png">
+            </div>
+            <div>
+              <input ng-model="search.result.item" type="search" name="search_request" placeholder="Store name or item" size="21" autocomplete="on" tabindex="1" required><br>
+            </div>
+          </li>
+          <li class="in_row">
+            <div>
+              <img class="input_img" src="../img/place.png">
+            </div>
+            <div>
+              <input ng-model="search.result.addr" type="search" name="place" placeholder="Address or city" size="21" autocomplete="on" tabindex="2" required><br>
+            </div>
+          </li>
+          <li>
+            <input ng-disabled="search_form.$invalid" ng-class="{but_en: search_form.$valid}" type="submit" value="Search" tabindex="3">
+          </li>
+        </ul>
+      </form>
+    </section>
+  </div>
+</div>

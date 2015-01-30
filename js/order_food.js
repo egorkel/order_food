@@ -25,14 +25,14 @@
   
   // Search controller
   app.controller("search_ctrl", function ($scope, $location, $http, $rootScope) {
+    // Initializing search string
     $scope.result = {};
     
     $scope.search = function () {
       // Loading search results from file (for now)
-      $rootScope.results = "empty :(";
+      $rootScope.results = {};
       $http.get("json/results.json").success(function (data) {
         $rootScope.results = data;
-        alert("Success!" + $rootScope.results);
         // Jumping to results page and pass search params
         $location.path("/results").search("item", $scope.result.item).search("addr", $scope.result.addr);
       });
@@ -41,31 +41,19 @@
   });
   
   // Results controller
-  app.controller("results_ctrl", function ($scope, $location, $http, $rootScope) {
-//  app.controller("results_ctrl", ["$http", function ($http, $scope, $location) {
+  app.controller("results_ctrl", function ($scope, $location, $rootScope) {
     // Search string in header
     $scope.item = $location.search().item;
     $scope.addr = $location.search().addr;
     
-//    // Loading search results from file (for now)
-//    $scope.results = "empty :(";
-//    $http.get("json/results.json").success(function (data) {
-//      $rootScope.results = data;
-//      alert("Success!" + $rootScope.results);
-//    }).error( function (data, status) {
-//      alert("ERROR! Status: " + status + "\nData: " + data);
-//    });
-    
+    // Search results
     $scope.results = $rootScope.results;
-//    alert($scope.results[0].name);
-    alert($scope.results[0].name);
     
     $scope.home = function () {
       // Jumping to home page
       $location.path("/");
       $location.url($location.path());
     };
-//  }]);
   });
   
 }());

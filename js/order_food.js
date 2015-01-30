@@ -20,11 +20,11 @@
     // Configuring routs
     $routeProvider
       .when("/order_food", {
-        templateUrl: "./html/search_section.html",
+        templateUrl: "order_food/html/search_section.html",
         controller: "search_ctrl"
       })
       .when("/order_food/results", {
-        templateUrl: "./html/results.html",
+        templateUrl: "order_food/html/results.html",
         controller: "results_ctrl"
       })
       .otherwise({redirectTo: "/order_food"});

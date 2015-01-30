@@ -1,0 +1,5 @@
+[{"name": "Pizza Best", "addr": "Sumska, 1", "desc": "Pizza delivery, pizza drive, pizza cafe", "img_url": "../img/pizza.png", "url": "/results"},
+{"name": "Fast & Tasty", "addr": "Pushkinska, 37", "desc": "Fastfood cafe", "img_url": "../img/ffood.png", "url": "/results"},
+{"name": "Ocean's shore", "addr": "Naberezhna, 6-A", "desc": "Delicacies from all over the world", "img_url": "../img/calamari.png", "url": "/results"},
+{"name": "Frugal meal", "addr": "Skoromnogo, 16", "desc": "Cheap dinners", "img_url": "../img/kasha.png", "url": "/results"}
+]

@@ -5,5 +5,15 @@
 </header>
 
 <div>
+  <div class="row">
+    <div class="col-3 centered" ng-repeat="result in results">
+      <section class="results_section">
+        <a href={{result.url}}><h2>{{result.name}}</h2></a>
+        <h3>{{result.addr}}</h3>
+        <p>{{result.desc}}</p>
+        <img src={{result.img_url}}>
+      </section>
+    </div>
+  </div>
   <button ng-click="home()">Home</button>
 </div>

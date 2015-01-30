@@ -25,6 +25,13 @@
   background-color: white;
 }
 
+.results_section {
+  width: 300px;
+  margin: auto;
+  padding: 10px;
+  background-color: white;
+}
+
 .in_row {
   width: 95%;
   margin-left: 30px;
@@ -53,9 +60,17 @@ input {
   text-align: center;
 }
 
+h1 {
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 700;
+}
 h2 {
   font-family: 'Maven Pro', sans-serif;
   font-weight: 700;
+}
+h3, p {
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 400;
 }
 
 ul {

@@ -20,23 +20,23 @@
     // Configuring routs
     $routeProvider
       .when("/", {
-        templateUrl: "./html/search_section.html",
+        templateUrl: "html/search_section.html",
         controller: "search_ctrl"
       })
       .when("/results", {
-        templateUrl: "./html/results.html",
+        templateUrl: "html/results.html",
         controller: "results_ctrl"
       })
       .otherwise({redirectTo: "/"});
   });
   
   // Search controller
-  app.controller("search_ctrl", function ($scope, $location, $routeParams) {
+  app.controller("search_ctrl", function ($scope, $location) {
     this.result = {};
     //this.results = results;
     
-//    this.submit = function (dest) {
-    $scope.search = function () {
+    this.search = function () {
+//    $scope.search = function () {
       // Jumping to results page and pass search params
       $location.path("/results").search("item", this.result.item).search("addr", this.result.addr);
     };
@@ -44,7 +44,8 @@
   
   // Results controller
   app.controller("results_ctrl", function ($scope, $location) {
-//    this.home = function () {
+    $scope.item = $location.search().item;
+    $scope.addr = $location.search().addr;
     $scope.home = function () {
       // Jumping to home page
       $location.path("/");
